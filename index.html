@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Name</title>
+</head>
+<body>
+
+    
+    <div class="container">
+        <div class="result">
+            <h1 id="textResult">Result</h1>
+            <div class="demo">
+                <video id="myVideo" autoplay muted hidden loop></video>
+                <h1 id="randomtxt"></h1>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Random item picker</h1>
+            <textarea id="myInput" placeholder="Введите список через запятую"></textarea>
+        </div>
+        <button class="button" onclick="playVideoAndRandom()">тык</button> <!-- Изменяем текст на кнопке -->
+    </div>
+
+
+    <script>
+        var list_urls = [
+            "https://media.tenor.com/OBbiRLgw-38AAAPo/seal-spinning-around.mp4",
+            "videos/RaccoonDance.mp4",
+            "https://media.tenor.com/a5CS1leFV6IAAAPo/cat-dance-toothless.mp4",
+            "https://media.tenor.com/ABeVmJ3y2WQAAAPo/cat-dancing-meme-dancing.mp4",
+            "https://media.tenor.com/tTPkmYfjLOgAAAPo/itsautumn.mp4",
+            "videos/cat-drift-cool.mp4",
+            "videos/cat-bonk.mp4",
+            "https://media.tenor.com/Rnshvc3VavoAAAPo/funny-christine.mp4",
+            "https://media.tenor.com/dWTaM2MSZx4AAAPo/cat-cats.mp4",
+            "https://media.tenor.com/4OT17Ww04YwAAAPo/cat-cats.mp4",
+            "videos/cat-edit.mp4",
+            "https://media.tenor.com/rzFrP2o12fEAAAPo/cat-funny.mp4",
+            "https://media.tenor.com/NQfq1liFH-8AAAPo/byuntear-sad.mp4",
+            "https://media.tenor.com/evOjo3SiS1sAAAPo/cat-blink.mp4",
+            "https://media.tenor.com/LdqmqqnX_8YAAAPo/funny-cat.mp4",
+            "https://media.tenor.com/Z5x6xrH6_AQAAAPo/cat-kissing.mp4",
+            "https://media.tenor.com/8QsOaiMKvWQAAAPo/cat-crunch.mp4",
+            "https://media.tenor.com/kRlG2TkDrBoAAAPo/cat-cat-meme.mp4",
+            "https://media.tenor.com/S9sScUagl9UAAAPo/ih-mo.mp4"
+
+        ]
+
+        var original_list_urls = [...list_urls]; // Создаем копию исходного списка
+        var button = document.querySelector('button'); // Получаем кнопку
+
+        function playVideoAndRandom() {
+            document.getElementById("randomtxt").innerHTML = "";
+            
+            if (list_urls.length === 0) { // Если список пуст, обновляем его
+                list_urls = [...original_list_urls];
+            }
+            
+            var randomIndex = Math.floor(Math.random() * list_urls.length);
+            var randomItem = list_urls[randomIndex];
+            list_urls.splice(randomIndex, 1); // Удаляем выбранный URL из списка
+
+            var video = document.getElementById("myVideo");
+            if(video) { // Проверяем, существует ли элемент
+                video.src = randomItem;
+                video.style.display = "block"; 
+                video.play();
+                button.disabled = true; // Отключаем кнопку
+                setTimeout(function() {
+                    video.pause(); // Останавливаем воспроизведение
+                    video.style.display = "none";
+                    getRandom();
+                    button.disabled = false; // Включаем кнопку
+                }, 7000);
+            }
+        }
+
+        function getRandom() {
+            var input = document.getElementById("myInput").value;
+            var list = input.split(',');
+            var randomItem = list[Math.floor(Math.random()*list.length)];
+            var randomText = document.getElementById("randomtxt");
+            randomText.innerHTML = randomItem;
+
+            // Подбор оптимального размера текста
+            var demo = document.querySelector('.demo');
+            var maxWidth = demo.offsetWidth - 25; // учитываем отступы
+
+            var fontSize = 100; // изначальный размер шрифта
+            randomText.style.fontSize = fontSize + "px";
+
+            // Пока ширина текста больше ширины блока .demo, уменьшаем размер шрифта
+            while (randomText.offsetWidth > maxWidth) {
+                fontSize -= 10;
+                randomText.style.fontSize = fontSize + "px";
+            if(fontSize < 10){
+                fontSize = 8;
+                randomText.style.fontSize = fontSize + "px";
+            }
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>
