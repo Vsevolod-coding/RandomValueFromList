@@ -8,30 +8,30 @@
     <title>Random Name</title>
 </head>
 <body>
-
-    
     <div class="container">
-        <div class="result">
-            <h1 id="textResult">Result</h1>
-            <div class="demo">
-                <video id="myVideo" autoplay muted hidden loop></video>
-                <h1 id="randomtxt"></h1>
+        <div class="blocks">
+            <div class="main">
+                <h1>Random item picker</h1>
+                <textarea id="myInput" placeholder="Введите список через запятую"></textarea>
             </div>
-        </div>
-        <div class="main">
-            <h1>Random item picker</h1>
-            <textarea id="myInput" placeholder="Введите список через запятую"></textarea>
-        </div>
-        <button class="button" onclick="playVideoAndRandom()">тык</button> <!-- Изменяем текст на кнопке -->
-    </div>
 
+            <div class="result">
+                <h1 id="textResult">Result</h1>
+                <div class="demo">
+                    <video id="myVideo" autoplay muted hidden loop></video>
+                    <h1 id="randomtxt"></h1>
+                </div>
+            </div>
+            <button class="button" onclick="playVideoAndRandom()">тык</button> <!-- Изменяем текст на кнопке -->
+        </div>
+    </div>
 
     <script>
         var list_urls = [
             "https://media.tenor.com/OBbiRLgw-38AAAPo/seal-spinning-around.mp4",
             "videos/RaccoonDance.mp4",
             "https://media.tenor.com/a5CS1leFV6IAAAPo/cat-dance-toothless.mp4",
-            "https://media.tenor.com/ABeVmJ3y2WQAAAPo/cat-dancing-meme-dancing.mp4",
+            "videos/whiteCatDance.mp4",
             "https://media.tenor.com/tTPkmYfjLOgAAAPo/itsautumn.mp4",
             "videos/cat-drift-cool.mp4",
             "videos/cat-bonk.mp4",
@@ -46,8 +46,14 @@
             "https://media.tenor.com/Z5x6xrH6_AQAAAPo/cat-kissing.mp4",
             "https://media.tenor.com/8QsOaiMKvWQAAAPo/cat-crunch.mp4",
             "https://media.tenor.com/kRlG2TkDrBoAAAPo/cat-cat-meme.mp4",
-            "https://media.tenor.com/S9sScUagl9UAAAPo/ih-mo.mp4"
-
+            "https://media.tenor.com/S9sScUagl9UAAAPo/ih-mo.mp4",
+            "videos/my_cat_anim.mp4",
+            "videos/kikiCAT.mp4",
+            "videos/dog-with-fly.mp4",
+            "videos/dog-bite-meme.mp4",
+            "videos/cat-flew.mp4",
+            "videos/cat_zoomed.mp4",
+            "videos/dog-nose-butterfly.mp4"
         ]
 
         var original_list_urls = [...list_urls]; // Создаем копию исходного списка
@@ -104,8 +110,5 @@
             }
         }
     </script>
-
-
-
 </body>
 </html>
