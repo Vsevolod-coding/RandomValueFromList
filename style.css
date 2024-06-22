@@ -9,28 +9,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    box-sizing: border-box;
     margin: 0;
+    /* padding: 1vw; */
     color: white;
+    align-content: center;
+    flex-wrap: wrap;
 }
 .blocks {
     display: flex;
-    justify-content: space-between;
     padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px);
-    flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
     font-size: 32px;
     background-color: rgba(23, 23, 23, 0.8);
-    padding: 100px; /* Увеличиваем отступы внутри контейнера */
+    padding: 80px;
     border-radius: 50px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
     text-align: left;
-    width: calc(100% - 250px); /* Увеличиваем ширину контейнера */
+    min-width: calc(100% - 200px);
+    max-width: calc(95% - 200px);
     z-index: 1;
+    /* box-sizing: border-box; */
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 .main h1 {
     font-weight: 600;
