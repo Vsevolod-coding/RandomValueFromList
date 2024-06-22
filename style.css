@@ -99,6 +99,7 @@ textarea {
     font-size: 58px;
     font-weight: 600;
     width: 100%;
+    min-width: 450px;
     height: 450px; /* Высота поля для комментария */
     padding: 20px 35px;
     resize: none; /* Отключение возможности изменения размера */
