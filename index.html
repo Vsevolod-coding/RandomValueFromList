@@ -18,7 +18,7 @@
             <div class="result">
                 <h1 id="textResult">Result</h1>
                 <div class="demo">
-                    <video id="myVideo" autoplay muted hidden loop></video>
+                    <video id="myVideo" preload="auto" autoplay muted hidden loop></video>
                     <h1 id="randomtxt"></h1>
                 </div>
             </div>
@@ -75,6 +75,20 @@
 
         var original_list_urls = [...list_urls]; // Создаем копию исходного списка
         var button = document.querySelector('button'); // Получаем кнопку
+
+        function preloadVideos() {
+            list_urls.forEach(function(url) {
+                var video = document.createElement('video');
+                video.src = url;
+                video.preload = 'auto';
+                video.style.display = 'none';
+                document.body.appendChild(video);
+            });
+        }
+
+        window.onload = function() {
+            preloadVideos();
+        };
 
         function playVideoAndRandom() {
             document.getElementById("randomtxt").innerHTML = "";
