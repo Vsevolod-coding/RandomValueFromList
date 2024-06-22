@@ -24,13 +24,12 @@ body {
 
 .container {
     font-size: 32px;
-    text-align: center;
     background-color: rgba(23, 23, 23, 0.8);
     padding: 100px; /* Увеличиваем отступы внутри контейнера */
     border-radius: 50px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
     text-align: left;
-    width: 80%; /* Увеличиваем ширину контейнера */
+    width: calc(100% - 250px); /* Увеличиваем ширину контейнера */
     z-index: 1;
 }
 .main h1 {
@@ -38,15 +37,22 @@ body {
     margin-bottom: 50px;
 }
 
-#textResult {
-    font-weight: 600;
-    margin-bottom: 50px;
-}
 .main {
     width: 60%;
 }
 
+#textResult {
+    font-weight: 600;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .button {
+    text-align: center;
     font-size: 64px;
     font-weight: 600;
     cursor: pointer;
@@ -56,8 +62,7 @@ body {
     padding: 10px 20px; /* Добавляем отступы вокруг текста */
     border-radius: 20px; /* Скругляем углы */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень */
-    margin-top: 50px;
-    width: 250px;
+    width: calc(100% - 100px);
     outline: none;
     transition-duration: 0.2s;
     -webkit-transition-property: box-shadow, transform, background-color;
@@ -99,6 +104,8 @@ textarea::placeholder {
     padding-top: 10px;
 }
 .demo {
+    margin-bottom: 60px;
+    margin-top: 50px;
     position: relative;
     font-family: 'Inter';
     font-size: 54px;
@@ -106,8 +113,7 @@ textarea::placeholder {
     color: #000000;
     display: flex;
     justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-    width: fit-content; /* Ширина блока подстраивается под содержимое */
+    align-items: center; /* Выравнивание по вертикали *//* Ширина блока подстраивается под содержимое */
     width: 450px;
     height: 450px;
     border-radius: 30px;
