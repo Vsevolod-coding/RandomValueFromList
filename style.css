@@ -33,7 +33,7 @@ body {
     display: flex;
     font-size: 32px;
     background-color: rgba(23, 23, 23, 0.8);
-    padding: 80px;
+    padding: 70px;
     border-radius: 50px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
     text-align: left;
@@ -47,15 +47,17 @@ body {
 }
 .main h1 {
     font-weight: 600;
+    font-size: 80px;
     margin-bottom: 50px;
 }
 
 .main {
-    width: 60%;
+    width: min-content;
 }
 
 #textResult {
     font-weight: 600;
+    font-size: 80px;
 }
 
 .result {
@@ -66,7 +68,7 @@ body {
 
 .button {
     text-align: center;
-    font-size: 64px;
+    font-size: 80px;
     font-weight: 600;
     cursor: pointer;
     background-color: #232323; /* Темный фон */
@@ -96,9 +98,9 @@ textarea {
     box-sizing: border-box;
     border-radius: 30px;
     border-width: 0px;
-    font-size: 58px;
+    font-size: 60px;
     font-weight: 600;
-    width: 100%;
+    width: 50vw;    
     min-width: 450px;
     height: 450px; /* Высота поля для комментария */
     padding: 20px 35px;
