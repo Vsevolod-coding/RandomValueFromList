@@ -1,0 +1,67 @@
+@media (min-width: 768px) and (max-width: 1300px) {
+    .container {
+        border-radius: 30px;
+    }
+    
+    .blocks {
+        gap: 60px;
+    }
+
+    .main h1 {
+        text-align: center;
+        font-size: 64px;
+        margin-bottom: 40px;
+    }
+
+    span {
+        font-size: 60px;
+    }
+
+    textarea {
+        height: 350px;
+        min-width: 400px;
+        width: 60vw;
+        border-radius: 30px;
+        font-size: 50px;
+        box-shadow: 0 0 12px rgb(8, 8, 8);
+    }
+
+    textarea::placeholder {
+        padding-top: 5px;
+        font-size: 30px;
+        line-height: 50px;
+        letter-spacing: 1px;
+    }
+
+    #textResult {
+        font-size: 64px;
+    }
+
+    .demo {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .demo:before,
+    .demo:after {
+        animation: glowing 20s linear infinite;
+    }
+
+    .demo:after {
+        filter: blur(12px);
+    }
+
+    #myVideo {
+        box-shadow: 0 0 15px rgb(60, 60, 60);
+    }
+
+    .button {
+        font-size: 56px;
+        padding: 5px 10px;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgb(10, 10, 10); /* Добавляем тень */
+        width: calc(100% - 150px);
+    }
+}
