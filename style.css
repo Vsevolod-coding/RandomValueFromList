@@ -82,6 +82,9 @@ body {
     -webkit-transition-property: box-shadow, transform, background-color;
     transition-property: box-shadow, transform, background-color;   
 }
+span {
+    font-weight: 500;
+}
 .button:hover{
     background-color: #181818;
     box-shadow: 0 0 12px rgb(0, 0, 0);
