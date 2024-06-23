@@ -19,12 +19,12 @@ body {
 }
 .blocks {
     display: flex;
-    padding-left: calc(50% - 800px);
-    padding-right: calc(50% - 800px);
+    /* padding-left: calc(50% - 800px); */
+    /* padding-right: calc(50% - 800px); */
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .container {
@@ -38,7 +38,7 @@ body {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
     text-align: left;
     min-width: calc(100% - 200px);
-    max-width: calc(95% - 200px);
+    max-width: calc(100% - 400px);
     z-index: 1;
     /* box-sizing: border-box; */
     justify-content: center;
