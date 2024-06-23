@@ -17,15 +17,6 @@ body {
     align-content: center;
     flex-wrap: wrap;
 }
-.blocks {
-    display: flex;
-    /* padding-left: calc(50% - 800px); */
-    /* padding-right: calc(50% - 800px); */
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: space-around;
-}
 
 .container {
     margin-top: 10px;
@@ -44,56 +35,31 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
 }
-.main h1 {
-    font-weight: 600;
-    font-size: 80px;
-    margin-bottom: 50px;
+
+.blocks {
+    display: flex;
+    /* padding-left: calc(50% - 800px); */
+    /* padding-right: calc(50% - 800px); */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .main {
     width: min-content;
 }
 
-#textResult {
+.main h1 {
     font-weight: 600;
     font-size: 80px;
+    margin-bottom: 50px;
 }
 
-.result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.button {
-    text-align: center;
-    font-size: 80px;
-    font-weight: 600;
-    cursor: pointer;
-    background-color: #232323; /* Темный фон */
-    color: white; /* Белый текст */
-    border: none; /* Убираем стандартную рамку */
-    padding: 10px 20px; /* Добавляем отступы вокруг текста */
-    border-radius: 20px; /* Скругляем углы */
-    box-shadow: 0 0 10px rgb(10, 10, 10); /* Добавляем тень */
-    width: calc(100% - 100px);
-    outline: none;
-    transition-duration: 0.2s;
-    -webkit-transition-property: box-shadow, transform, background-color;
-    transition-property: box-shadow, transform, background-color;   
-}
 span {
     font-weight: 500;
 }
-.button:hover{
-    background-color: #181818;
-    box-shadow: 0 0 12px rgb(0, 0, 0);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-}
-.button:active{
-    transform: scale(1.015);
-}
+
 textarea {
     font-family: 'Inter';
     color: #ffffff;
@@ -111,9 +77,11 @@ textarea {
     background-color: #232323;
     z-index: -1;
 }
+
 textarea:focus {
     outline: none;
 }
+
 textarea::placeholder {
     font-family: 'Inter';
     font-weight: 500;
@@ -123,6 +91,18 @@ textarea::placeholder {
     line-height: 50px;
     letter-spacing: 2px;
 }
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textResult {
+    font-weight: 600;
+    font-size: 80px;
+}
+
 .demo {
     margin-bottom: 60px;
     margin-top: 50px;
@@ -140,6 +120,7 @@ textarea::placeholder {
     background-color: rgb(255, 255, 255);
     /* остальные стили */
 }
+
 .demo:before,
 .demo:after {
     content: '';
@@ -154,14 +135,17 @@ textarea::placeholder {
     background-size: 430%;
     animation: glowing 25s linear infinite;
 }
+
+.demo:after {
+    filter: blur(17px);
+}
+
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: -200% 0; }
     100% { background-position: 0 0; }
 }
-.demo:after {
-    filter: blur(17px);
-}
+
 #myVideo {
     scale: 80%;
     position: relative;
@@ -172,6 +156,7 @@ textarea::placeholder {
     box-shadow: 0 0 20px rgb(70, 70, 70);
     animation: fadeInOut 7s ease-in-out forwards;
 }
+
 @keyframes fadeInOut {
     0% {
         opacity: 0;
@@ -198,8 +183,38 @@ textarea::placeholder {
         transform: scale(0.8);
     }
 }
+
 #randomtxt h1 {
     font-family: 'Inter';
     font-weight: 600;
     color: #000000;
+}
+
+.button {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #232323; /* Темный фон */
+    color: white; /* Белый текст */
+    border: none; /* Убираем стандартную рамку */
+    padding: 10px 20px; /* Добавляем отступы вокруг текста */
+    border-radius: 20px; /* Скругляем углы */
+    box-shadow: 0 0 10px rgb(10, 10, 10); /* Добавляем тень */
+    width: calc(100% - 100px);
+    outline: none;
+    transition-duration: 0.2s;
+    -webkit-transition-property: box-shadow, transform, background-color;
+    transition-property: box-shadow, transform, background-color;   
+}
+
+.button:hover{
+    background-color: #181818;
+    box-shadow: 0 0 12px rgb(0, 0, 0);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.button:active{
+    transform: scale(1.015);
 }
