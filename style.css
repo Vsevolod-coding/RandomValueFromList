@@ -75,7 +75,7 @@ body {
     border: none; /* Убираем стандартную рамку */
     padding: 10px 20px; /* Добавляем отступы вокруг текста */
     border-radius: 20px; /* Скругляем углы */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+    box-shadow: 0 0 10px rgb(10, 10, 10); /* Добавляем тень */
     width: calc(100% - 100px);
     outline: none;
     transition-duration: 0.2s;
@@ -84,7 +84,7 @@ body {
 }
 .button:hover{
     background-color: #181818;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.815);
+    box-shadow: 0 0 12px rgb(0, 0, 0);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
@@ -115,8 +115,10 @@ textarea::placeholder {
     font-family: 'Inter';
     font-weight: 500;
     color: rgb(137, 137, 137); /* Цвет текста подсказки */
-    font-size: 36px; /* Размер шрифта текста подсказки */
-    padding-top: 10px;
+    font-size: 34px; /* Размер шрифта текста подсказки */
+    padding-top: 11px;
+    line-height: 50px;
+    letter-spacing: 2px;
 }
 .demo {
     margin-bottom: 60px;
@@ -155,7 +157,7 @@ textarea::placeholder {
     100% { background-position: 0 0; }
 }
 .demo:after {
-    filter: blur(15px);
+    filter: blur(17px);
 }
 #myVideo {
     scale: 80%;
@@ -164,7 +166,7 @@ textarea::placeholder {
     max-height: 100%; /* Делаем видео адаптивным */
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 20px rgb(70, 70, 70);
     animation: fadeInOut 7s ease-in-out forwards;
 }
 @keyframes fadeInOut {
